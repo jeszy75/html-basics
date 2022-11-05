@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML alapok</title>
+    <style>
+        table {
+            border-collapse: collapse
+        }
+        td,
+        th {
+            border: thin solid black;
+            padding: 0.5em
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML alapok</h1>
+        <nav>
+            <h2>Tartalomjegyzék</h2>
+            <ul>
+                <li>
+                    <a href="#figure">Ábra</a>
+                </li>
+                <li>
+                    <a href="#text-level-semantics">Szövegszintű szemantika</a>
+                </li>
+                <li>
+                    <a href="#lists">Listák</a>
+                </li>
+                <li>
+                    <a href="#verbatim">Programkód</a>
+                </li>
+                <li>
+                    <a href="#modifications">Módosítások a szövegben</a>
+                </li>
+                <li>
+                    <a href="#blockquote">Hosszabb idézet</a>
+                </li>
+                <li>
+                    <a href="#iframe">Keret</a>
+                </li>
+                <li>
+                    <a href="#math">Matematikai formula</a>
+                </li>
+                <li>
+                    <a href="#svg">Vektorgrafika</a>
+                </li>
+                <li>
+                    <a href="#video">Videó</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="figure">
+        <h2>Ábra</h2>
+        <figure style="text-align: center">
+            <img src="image.png" alt="Egy négyzet, benne a &quot;kép&quot; szöveggel">
+            <figcaption>Egy demonstrációs célú helykitöltő kép</figcaption>
+        </figure>
+    </section>
+    <section id="text-level-semantics">
+        <h2>Szövegszintű szemantika</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Elem</th>
+                    <th>Felhasználás célja</th>
+                    <th>Példa a használatra</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>abbr</code></td>
+                    <td>Rövidítés, betűszó</td>
+                    <td>
+                        <p>Számos alkalmazás épül a <abbr title="Hypertext Transfer Protocol">HTTP</abbr> protokollra.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>b</code></td>
+                    <td>A környezettől eltérő módon megjelenítendő szöveg (például egy kulcsszó
+                        vagy egy termék neve)</td>
+                    <td>
+                        <p>Cégünk a <b>Nibmus 2000</b> seprűk kizárólagos haza forgalmazója.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>cite</code></td>
+                    <td>Alkotás címe</td>
+                    <td>
+                        <p>A kedvenc könyvem a szerzőtől <cite>A Foucault-inga</cite>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>code</code></td>
+                    <td>Kódrészlet</td>
+                    <td>
+                        <p>Lásd a <code>java.lang.System</code> osztály
+                            <code>currentTimeMillis()</code> metódusát.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>data</code></td>
+                    <td>Gépi feldolgozásra alkalmas formában is adott tartalom</td>
+                    <td>
+                        <p><data value="2048">kétezer-negyvennyolc</data></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>dfn</code></td>
+                    <td>Definiálandó kifejezés</td>
+                    <td>
+                        <p>A <dfn>malaclopó</dfn> nagy térfogatú, hosszú (jellemzően térdig érő)
+                            szövet- vagy bőrkabát.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>em</code></td>
+                    <td>Nyomatékos szöveg</td>
+                    <td>
+                        <p>Legyen szíves <em>azonnal</em> elengedni a fülemet!</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>i</code></td>
+                    <td>Más hangnemű, a normál szövegtől eltérő stílusú szöveg (például idegen
+                        szó)</td>
+                    <td>
+                        <p>A film <i lang="la">in medias res</i> kezdődik: a főhős egy csapat
+                            vérszomjas vámpír elől menekül.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>kbd</code></td>
+                    <td>Felhasználói input</td>
+                    <td>
+                        <p>Kilépéshez nyomja meg a <kbd><kbd>Ctrl</kbd>+<kbd>Q</kbd></kbd>
+                            billenyűket!</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>mark</code></td>
+                    <td>(Felhasználói) kiemelés</td>
+                    <td>
+                        <p>Aki m<mark>ás</mark>nak vermet <mark>ás</mark>, maga esik bele.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>meter</code></td>
+                    <td>Egy ismert tartományba eső skalár érték.</td>
+                    <td>
+                        <p>Your score is <meter min="0" max="40" low="20" value="30">30/40s</meter>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>q</code></td>
+                    <td>Rövid idézet</td>
+                    <td>
+                        <q>Ki itt belépsz, hagyj fel minden reménnyel!</q>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>s</code></td>
+                    <td>Nem pontos, nem releváns információ</td>
+                    <td>
+                        <p><s>Jelentkezzen még ma!</s> Minden hely betelt.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>samp</code></td>
+                    <td>Programkimenet</td>
+                    <td>
+                        <p>A program a <samp>Helló, világ!</samp> szöveget írja a kimenetre.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>small</code></td>
+                    <td>Apró betűs szöveg</td>
+                    <td>
+                        <small>A tartalom használatából származó minden kockázat a felhasználót
+                            terheli.</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>strong</code></td>
+                    <td>Fontos szöveg</td>
+                    <td>
+                        <strong><strong>Vigyázz</strong>, a kutya harap!</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>sub</code></td>
+                    <td>Alsó index</td>
+                    <td>
+                        <p>Fulladáshoz vezethet a <span>H<sub>2</sub>O</span> mértéktelen
+                            fogyasztása.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>sup</code></td>
+                    <td>Felső index</td>
+                    <td>
+                        <p>Java<sup>TM</sup></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>time</code></td>
+                    <td>Dátum, idő</td>
+                    <td>
+                        <p>Tardar Sauce (közismertebb nevén Grumpy Cat) <time datetime="2012-04-04">2012. április
+                                4.</time>-én született.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>u</code></td>
+                    <td>Nem meghatározott célú nem szöveges annotálás (például helyesírási hibák
+                        jelzése)</td>
+                    <td>
+                        <p><u>Bagoj</u> mondja verébnek, hogy <u>nagy fejű</u>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>var</code></td>
+                    <td>Változó</td>
+                    <td>
+                        <p>Az <var>eps</var> változó értéke adja meg a kívánt pontosságot.</p>
+                        <p>
+                            <code>extern double <var>eps</var>;</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="lists">
+        <h2>Listák</h2>
+        <h3>Felsorolás</h3>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Maecenas in elit nec odio viverra ullamcorper.</li>
+            <li>Sed nonummy lacinia augue.</li>
+        </ul>
+        <h3>Számozott lista</h3>
+        <ol>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Maecenas in elit nec odio viverra ullamcorper.</li>
+            <li>Sed nonummy lacinia augue.</li>
+        </ol>
+        <h3>Leíró lista</h3>
+        <dl>
+            <dt>Ut fermentum metus quis nisl</dt>
+            <dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum ipsum.
+                Donec et neque. Maecenas justo sapien, placerat eu, luctus quis, rutrum at,
+                velit. Aliquam sit amet magna ut felis accumsan dignissim. Aliquam vitae ipsum
+                suscipit odio imperdiet consequat. Nam orci nisi, dapibus quis, cursus quis,
+                condimentum id, nibh. Phasellus nisl tellus, accumsan nec, rhoncus suscipit,
+                porta vel, dolor. Aenean aliquam tellus at leo. Duis venenatis dui in ante.
+                Curabitur tincidunt viverra eros. Etiam feugiat felis et nibh. Mauris
+                adipiscing. Ut dapibus augue eu lorem. Ut feugiat auctor quam. Class aptent
+                taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
+                Vivamus ut odio a ante vulputate vehicula. Phasellus semper tincidunt
+                lorem.</dd>
+            <dt>Aenean luctus lectus a felis</dt>
+            <dd>Proin lobortis fringilla augue. Aenean viverra facilisis turpis. Nullam sem.
+                Vivamus pulvinar, erat sit amet aliquam luctus, ipsum quam rhoncus metus, vitae
+                placerat massa libero in dolor. Donec vitae justo non turpis convallis sodales.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus in neque nec
+                augue pulvinar posuere. Curabitur suscipit sollicitudin erat. Aenean accumsan
+                volutpat leo. Nullam nec ligula. Ut mi est, volutpat non, aliquam a, ultrices
+                feugiat, dui. Vestibulum in mi in risus volutpat accumsan. Etiam felis odio,
+                venenatis ac, convallis quis, lacinia id, lorem. Fusce vel magna.</dd>
+        </dl>
+    </section>
+    <section id="verbatim">
+        <h2>Programkód</h2>
+        <p>Ügyeljünk a kódban a <code>'&lt;'</code> és <code>'&amp;'</code> karakterek megfelelő
+            megadására!</p>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="hu"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Helló, világ!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Helló, világ!&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+    <section id="modifications">
+        <h2>Módosítások a szövegben</h2>
+        <p>Az Unicode szabvány <ins datetime="2022-10-29">jelenleg</ins> aktuális verziója a
+            <del datetime="2022-10-29">14.0.0</del>
+            <ins datetime="2022-10-29">15.0.0</ins> számú.
+        </p>
+    </section>
+    <section id="blockquote">
+        <h2>Hosszabb idézet</h2>
+        <p>Ez egy hosszab idézet:</p>
+        <blockquote cite="http://www.lipsum.com/">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec pellentesque
+                interdum tellus. Nam pellentesque eros. Sed eget orci sed neque tincidunt
+                posuere. Cras adipiscing bibendum neque. Proin massa. Sed est. Nullam
+                sollicitudin. Suspendisse vulputate, nulla non bibendum vehicula, lectus lectus
+                venenatis nulla, sed eleifend enim odio ac nisi. Phasellus faucibus, magna ut
+                tempus vestibulum, urna felis fermentum dui, vel imperdiet elit nibh ut tortor.
+                Aenean tempor sem sit amet sapien faucibus varius. In sit amet est ac diam
+                placerat faucibus. Sed non quam id lorem ornare aliquet. Mauris ut nulla a felis
+                dignissim tristique. Ut tellus massa, sagittis sed, adipiscing et, lobortis
+                eget, libero. Nulla porta nunc et dolor.</p>
+            <p>Quisque luctus enim id lacus. Quisque auctor. Mauris sit amet tortor. Vestibulum
+                odio velit, ultricies eu, cursus dapibus, lacinia ut, dui. Aenean feugiat
+                iaculis ligula. Donec et mauris. In hac habitasse platea dictumst. Lorem ipsum
+                dolor sit amet, consectetuer adipiscing elit. Vestibulum vel metus. Maecenas
+                auctor vulputate erat. Mauris dolor purus, aliquet eu, egestas quis,
+                pellentesque a, turpis. Morbi eget purus nec est lobortis interdum. Aenean a
+                velit.</p>
+            <p>Phasellus tempus imperdiet dui. Phasellus urna risus, tincidunt nec, placerat
+                vitae, pellentesque eget, enim. Nam eu eros varius elit commodo malesuada. Morbi
+                mi lorem, lacinia ac, consequat quis, dapibus et, lacus. Ut volutpat nisi at
+                lectus. Proin iaculis, ipsum vitae aliquet sollicitudin, nulla felis cursus sem,
+                vitae fringilla odio elit a urna. Duis diam urna, gravida non, commodo in,
+                vehicula nec, lectus. Ut interdum suscipit nulla. In vulputate vehicula nisi.
+                Proin ut nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia Curae; Pellentesque vel sapien. In hac habitasse platea
+                dictumst.</p>
+        </blockquote>
+    </section>
+    <section id="iframe">
+        <h2>Keret</h2>
+        <p>Példa keret beágyazására:</p>
+        <iframe src="https://html.spec.whatwg.org/multipage/" width="800" height="400"></iframe>
+    </section>
+    <section id="math">
+        <h2>Matematikai formula</h2>
+        <p>Példa <a href="http://www.w3.org/Math/">MathML</a> formula beágyazására:</p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mrow>
+                <mi>z</mi>
+                <mo>=</mo>
+                <msqrt>
+                    <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <msup>
+                        <mi>y</mi>
+                        <mn>2</mn>
+                    </msup>
+                </msqrt>
+            </mrow>
+        </math>
+        <p>Formulákat a szövegben is el lehet helyezni: <math xmlns="http://www.w3.org/1998/Math/MathML"
+                display="inline">
+                <munderover>
+                    <mo>&#x2211;</mo>
+                    <mrow>
+                        <mi>i</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                    </mrow>
+                    <mi>n</mi>
+                </munderover>
+                <msub>
+                    <mi>x</mi>
+                    <mi>i</mi>
+                </msub>
+            </math>.</p>
+    </section>
+    <section id="svg">
+        <h2>Vektorgrafika</h2>
+        <p>Példa <a href="http://www.w3.org/Graphics/SVG/">SVG</a> vektorgrafika
+            beágyazására:</p>
+        <svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+            <circle r="25" cx="50" cy="50" stroke="blue" fill="red" stroke-width="5px" />
+        </svg>
+    </section>
+    <section id="video">
+        <h2>Videó</h2>
+        <video controls="controls" width="400">
+            <source src="https://x3dom.org/x3dom/example/video/big_buck_bunny.mp4" type="video/mp4">
+            <source src="https://x3dom.org/x3dom/example/video/big_buck_bunny.ogv" type="video/ogg">
+            <p>Your browser does not support the <code>video</code> element.</p>
+        </video>
+    </section>
+    <footer>
+        <address> Készítette: Jeszenszky Péter &lt;<a
+                href="mailto:jeszenszky.peter@inf.unideb.hu">jeszenszky.peter@inf.unideb.hu</a>&gt;<br> Utolsó
+            módosítás: <time datetime="2022-10-29">2022. október 29.</time>
+        </address>
+    </footer>
+</body>
+</html>
